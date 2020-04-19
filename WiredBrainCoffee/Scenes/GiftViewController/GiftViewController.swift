@@ -11,9 +11,14 @@ import UIKit
 class GiftViewController: UIViewController {
     
     @IBOutlet weak var seasonalHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var thankyouHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var seasonalCollectionView: UICollectionView!
     
+    @IBOutlet weak var thankyouCollectionView: UICollectionView!
+    
     var seasonalGiftCards = [GiftCardModel]()
+    var thankyouDataSource: SmallGiftCardCollectionViewDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,14 @@ class GiftViewController: UIViewController {
             guard let self = self else { return }
             self.seasonalGiftCards = cards
             self.seasonalCollectionView.reloadData()
+        }
+        
+        GiftCardFunctions.getThankYouGiftCards { [weak self] (cards) in
+            guard let self = self else { return }
+            self.thankyouDataSource = SmallGiftCardCollectionViewDataSource(giftCards: cards)
+            self.thankyouCollectionView.dataSource = self.thankyouDataSource
+            self.thankyouCollectionView.delegate = self.thankyouDataSource
+            self.thankyouCollectionView.reloadData()
         }
     }
     
@@ -38,6 +51,8 @@ class GiftViewController: UIViewController {
         let width = seasonalCollectionView.bounds.width - 30
         let height = width / 1.5
         seasonalHeightConstraint.constant = height
+        
+        thankyouHeightConstraint.constant = height / 2
     }
 }
 
@@ -55,9 +70,8 @@ extension GiftViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = seasonalCollectionView.bounds.width - 50
+        let width = collectionView.bounds.width - 50
         let height = width / 1.5
         return CGSize(width: width, height: height)
     }
-    
 }

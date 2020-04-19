@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18E0EE4B244C8C3100D00F7E /* GiftCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E0EE4A244C8C3100D00F7E /* GiftCardCollectionViewCell.swift */; };
+		18E0EE4D244CD8ED00D00F7E /* SmallGiftCardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E0EE4C244CD8ED00D00F7E /* SmallGiftCardCollectionViewDataSource.swift */; };
 		18F857222448BE23008999FE /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F857212448BE23008999FE /* GiftViewController.swift */; };
 		E751E92F21BCD6E800248B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751E92E21BCD6E800248B9E /* AppDelegate.swift */; };
 		E751E93621BCD6E800248B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E751E93521BCD6E800248B9E /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		18E0EE4A244C8C3100D00F7E /* GiftCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		18E0EE4C244CD8ED00D00F7E /* SmallGiftCardCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGiftCardCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		18F857212448BE23008999FE /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		E751E92B21BCD6E800248B9E /* WiredBrainCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiredBrainCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E751E92E21BCD6E800248B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				E78E378E21BE37E800DF4E57 /* GiftViewController.storyboard */,
 				18F857212448BE23008999FE /* GiftViewController.swift */,
 				18E0EE4A244C8C3100D00F7E /* GiftCardCollectionViewCell.swift */,
+				18E0EE4C244CD8ED00D00F7E /* SmallGiftCardCollectionViewDataSource.swift */,
 			);
 			path = GiftViewController;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				E7B5046921BF7FAA00076561 /* GiftCardModel.swift in Sources */,
 				E751E92F21BCD6E800248B9E /* AppDelegate.swift in Sources */,
 				E7B5046B21BF867000076561 /* GiftCardFunctions.swift in Sources */,
+				18E0EE4D244CD8ED00D00F7E /* SmallGiftCardCollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
